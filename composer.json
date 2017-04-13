@@ -1,0 +1,30 @@
+{
+	"name": "iannsp/phpmatch",
+	"description": ".",
+	"license": "GPL-3.0+",
+	"authors": [
+		{
+			"name": "Ivo Nascimento",
+			"email": "iannsp@gmail.com",
+			"role": "Author",
+			"homepage":"http://ivonascimento.wordpress.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4"
+	},
+	"autoload": {
+		"psr-4": {"phpmatch\\": "src/"},
+		"files":["src/match.php"]
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.4"
+	},
+	"autoload-dev": {
+		"psr-4": {"phpmatch\\": "tests/"}
+	},
+	"scripts": {
+		"test": "phpunit --verbose"
+	}
+}
+
