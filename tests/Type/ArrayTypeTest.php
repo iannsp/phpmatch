@@ -95,4 +95,13 @@ class ArrayTypeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($newA->head,2);
         $this->assertEquals($newA->tail,[3]);
     }
+
+    public function testMatchEmpty()
+    {
+        //TODO get a better interface to head tail 
+        $a = [];
+        $b = [];
+        $this->assertTrue(phpmatch\match($a)->with($b));
+    }
+
 }

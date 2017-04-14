@@ -18,7 +18,7 @@ class ArrayType{
             foreach($this->match as $idx => &$item){
                 if($item== M::r){
                     $this->match[$idx]= $with[$idx];
-                }else if($item == M::_)
+                }else if($item == M::_ || $with[$idx]==M::_)
                     continue;
                 else{
                     if($item !== $with[$idx])
