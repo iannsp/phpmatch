@@ -10,7 +10,11 @@ class Match{
 
     public function with(...$wargs)
     {
-        return ($this->args === $wargs);
+        foreach($this->args as $idx=>$arg){
+            if(!(new Type\ScalarType($arg))->with($wargs[$idx]))
+                return false;    
+        }
+        return true;
     }
 
 }
