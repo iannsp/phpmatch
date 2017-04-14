@@ -2,6 +2,6 @@
 namespace phpmatch;
 
 
-function match(...$args){
+function match(&...$args){
     return new Match($args);
 }

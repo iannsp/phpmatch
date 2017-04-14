@@ -22,7 +22,7 @@ class MatchTest extends \PHPUnit_Framework_TestCase
             ["batman", "batman", true],
             [1, "batman", false],
             [1.0, 1, false]
-        ];
+       ];
     } 
 
     /**
@@ -48,8 +48,7 @@ class MatchTest extends \PHPUnit_Framework_TestCase
      */
     public function testMatchNull($a, $b, $expected)
     {
-        $this->assertFalse(match(null)->with(1));
-        //$this->assertFalse(match($x)->with(1));
+        $this->assertEquals($expected, match($a)->with($b));
     }    
 
 }
