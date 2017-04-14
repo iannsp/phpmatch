@@ -16,8 +16,10 @@ class ArrayType{
         if(!$sameSizeOrInternal && !$head_tail) return false;
         if($sameSizeOrInternal){ 
             foreach($this->match as $idx => &$item){
-                if($item== M::r){
-                    $this->match[$idx]= $with[$idx];
+                if($item== M::r ){
+                    if(!array_key_exists($idx, $with))
+                        return false;
+                        $this->match[$idx]= $with[$idx];
                 }else if($item == M::_ || $with[$idx]==M::_)
                     continue;
                 else{
