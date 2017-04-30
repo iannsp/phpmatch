@@ -59,16 +59,16 @@ test the matches.
 ```php
 $a = 1;
 match($a)
-    ->Case(   1   )->Do(function(){ echo "a is 1";})
-    ->Case([1,2,3])->Do(function(){echo "a is array [1,2,3];});
+    ->incase(   1   )->doIt(function(){ echo "a is 1";})
+    ->incase([1,2,3])->doIt(function(){echo "a is array [1,2,3];});
 
 ```
 * Guards 
 ```php
 $a = 1;
 match($a)
-    ->incase(   1   )->when(true)->doit(function(){ echo "a is 1";})
-    ->incase([1,"y"=> M::r,3])->when($y > 10)->doit(function(){echo "a is array [1,2,3];});
+    ->incase(   1   )->when(true)->doIt(function(){ echo "a is 1";})
+    ->incase([1,"y"=> M::r,3])->when($y > 10)->doIt(function(){echo "a is array [1,2,3];});
 
 ```
 
