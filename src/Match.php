@@ -23,4 +23,14 @@ class Match{
         return true;
     }
 
+    public function incase(&$cargs, $fn)
+    {
+
+    }
+
+    public function when($fn)
+    {
+
+    }
+
 }

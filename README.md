@@ -67,8 +67,8 @@ match($a)
 ```php
 $a = 1;
 match($a)
-    ->Case(   1   )->When(true)->Do(function(){ echo "a is 1";})
-    ->Case([1,"y"=> M::r,3])->When($y > 10)->Do(function(){echo "a is array [1,2,3];});
+    ->incase(   1   )->when(true)->doit(function(){ echo "a is 1";})
+    ->incase([1,"y"=> M::r,3])->when($y > 10)->doit(function(){echo "a is array [1,2,3];});
 
 ```
 
