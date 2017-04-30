@@ -6,27 +6,11 @@ class TypeStrategy{
     public static function build(&$arg)
     {
         if (is_null($arg))
-            return self::toNull($arg);
+            return new Type\NullType($arg);
         if (is_scalar($arg))
-            return self::toScalar($arg);
+            return new Type\ScalarType($arg);
         if (is_array($arg))
-            return self::toArray($arg);
+            return new Type\ArrayType($arg);
 
     }
-
-    private static function toScalar(&$arg)
-    {
-        return new Type\ScalarType($arg);
-    }
-
-    private static function toArray(&$arg)
-    {
-        return new Type\ArrayType($arg);
-    }
-
-    private static function toNull(&$arg)
-    {
-        return new Type\NullType($arg);
-    }
-
 }
