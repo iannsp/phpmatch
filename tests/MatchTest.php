@@ -53,7 +53,7 @@ class MatchTest extends \PHPUnit_Framework_TestCase
 
     public function testVariableUndefined()
     {
-        $this->assertTrue(match($newVariable)->with(1));
+        $this->assertFalse(match($newVariable)->with(1));
         $this->assertEquals($newVariable, 1);
     }
 }
